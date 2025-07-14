@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - IMS</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-title">📝 Sign Up for IMS</h2>
+
+    <form action="php/signup.php" method="POST" class="form-box">
+      <label for="name">👤 Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+
+      <label for="phone">📱 Mobile Number (10-digit only)</label>
+      <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" required placeholder="Enter your mobile number" />
+
+      <label for="email">📧 Gmail Address</label>
+      <input type="email" id="email" name="email" pattern=".+@gmail\\.com" required placeholder="Enter your Gmail" />
+
+      <label for="password">🔒 Password</label>
+      <input type="password" id="password" name="password" required placeholder="Set a password" />
+
+      <button type="submit" class="btn">Create Account</button>
+    </form>
+
+    <p style="text-align: center;">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+</body>
+</html>

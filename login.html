@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - IMS</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-title">🔐 Login to IMS</h2>
+
+    <form action="php/login.php" method="POST" class="form-box">
+      <label for="phone">📱 Mobile Number (10-digit only)</label>
+      <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" required placeholder="Enter your mobile number" />
+
+      <label for="email">📧 Gmail Address</label>
+      <input type="email" id="email" name="email" pattern="+@gmail.com" required placeholder="Enter your Gmail" />
+
+      <label for="password">🔒 Password</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password" />
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <p style="text-align: center;">Don't have an account? <a href="signup.html">Sign up here</a></p>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showDevInfo()" class="btn secondary">📞 About Developer</button>
+    </div>
+  </div>
+
+  <script>
+    function showDevInfo() {
+      alert("👨‍💻 Developer Info:\\nName: Jayanta Kumar Kakati\\nPhone: +91-XXXXXXXXXX\\nWebsite: https://yourwebsite.com\\nSupport: Contact for technical issues.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+add botton: inside billing.php below the invoice section 
+
+
+
+
+<button class="btn secondary" onclick="window.print()">🖨️ Print Invoice</button>

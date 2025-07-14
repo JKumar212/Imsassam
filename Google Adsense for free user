@@ -1,0 +1,39 @@
+
+two banner added to deshboard.php and billing.php (insert this at the bottom)
+
+replace both data-ad-client and data-ad-slot with your actual adsent value
+
+
+
+
+
+<?php if (!$_SESSION['subscription_active']): ?>
+  <!-- Google AdSense for Free Users -->
+  <div style="position:fixed;bottom:0;width:100%;text-align:center;background:#fff;padding:10px;z-index:999;">
+    <div style="margin: 10px auto;">
+      <!-- First Ad Slot -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="1111111111"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div style="margin: 10px auto;">
+      <!-- Second Ad Slot -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="2222222222"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+<?php endif; ?>
+
+
+
+
+

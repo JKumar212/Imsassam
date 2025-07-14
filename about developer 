@@ -1,0 +1,19 @@
+(Add to login.html)
+
+
+
+
+<!-- Add this just below the login form or at the bottom -->
+<div class="footer">
+  <button onclick="document.getElementById('devModal').style.display='block'" class="btn secondary">👨‍💻 About the Developer</button>
+</div>
+
+<!-- Modal -->
+<div id="devModal" style="display:none; position:fixed;top:20%;left:50%;transform:translateX(-50%);
+  background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,0.3);z-index:1000;">
+  <h3>Developer Info</h3>
+  <p><strong>Name:</strong> Jayanta Kumar Kakati</p>
+  <p><strong>Website:</strong> <a href="https://yourwebsite.in" target="_blank">yourwebsite.in</a></p>
+  <p><strong>Phone:</strong> +91-9876543210</p>
+  <button onclick="document.getElementById('devModal').style.display='none'" class="btn">Close</button>
+</div>

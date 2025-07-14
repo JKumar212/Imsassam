@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subscribe - IMS</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>💎 Upgrade to Premium</h2>
+    <p>Choose a subscription plan:</p>
+
+    <div class="form-box">
+      <select id="plan">
+        <option value="297">Quarterly - ₹297</option>
+        <option value="1188">Annually - ₹1188</option>
+      </select>
+      <button class="btn" onclick="payNow()">Pay with Razorpay</button>
+    </div>
+  </div>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    function payNow() {
+      const amount = document.getElementById("plan").value;
+      const options = {
+        "key": "YOUR_RAZORPAY_KEY_ID", // Replace with your Razorpay Key ID
+        "amount": amount * 100, // in paise
+        "currency": "INR",
+        "name": "IMS Subscription",
+        "description": "Premium Subscription",
+        "handler": function (response) {
+          // On success, redirect to server to activate subscription
+          window.location.href = `php/activate-subscription.php?amount=${amount}&payment_id=${response.razorpay_payment_id}`;
+        },
+        "prefill": {
+          "name": "<?= $_SESSION['username'] ?? 'User'; ?>",
+          "email": "",
+          "contact": ""
+        },
+        "theme": {
+          "color": "#2ecc71"
+        }
+      };
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+</body>
+</html>
